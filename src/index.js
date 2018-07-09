@@ -4,5 +4,5 @@ import './index.css';
 import Carousel from './Carousel';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Carousel />, document.getElementById('root'));
 registerServiceWorker();
