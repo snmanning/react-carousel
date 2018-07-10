@@ -26,17 +26,23 @@ class Carousel extends Component {
     });
   }
 
-  // slidePicR(c) {
-  //   this.setState({
-  //     left: c.target.value
-  //   })
-  // }
+  slidePicR() {
+    this.setState({
+      viewerIndex: (((this.state.viewerIndex - 1) 
+                     % this.state.viewerImages.length) 
+                     + this.viewerImages.length) 
+                     % this.viewerImages.length
+    })
+  }
 
-  // slidePicL(c) {
-  //   this.setState({
-  //     right: c.target.value
-  //   })
-  // }
+  slidePicL() {
+    this.setState({
+      viewerIndex: (((this.state.viewerIndex + 1) 
+                     % this.state.viewerImages.length) 
+                     + this.viewerImages.length) 
+                     % this.viewerImages.length
+    })
+  }
 
   render() {
     const style = {
