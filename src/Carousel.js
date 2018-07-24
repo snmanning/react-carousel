@@ -20,11 +20,11 @@ class Carousel extends Component {
       };
     }
 
-  changePic(image){
-    this.setState({
-      viewerImages: image
-    });
-  }
+  // changePic(image){
+  //   this.setState({
+  //     viewerImages: image
+  //   });
+  // }
 
   slidePicR() {
     this.setState({
@@ -62,10 +62,10 @@ class Carousel extends Component {
           </div>
           <section className='Carousel-controls'>
             <button className='Carousel-move' 
-                    onClick={() => this.changePic(this.state.viewer-1)}>
+                    onClick={this.slidePicR.bind(this)}>
                     Right </button>
             <button className='Carousel-move' 
-                    onClick={() => this.changePic(this.state.viewer+1)} >
+                    onClick={this.slidePicL.bind(this)} >
                     Left </button>
           </section>
       </div>
